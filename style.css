@@ -1,0 +1,21 @@
+body{
+    color: rgb(23, 83, 142);
+    background-color: rgb(128, 146, 152);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+header{
+    background-color: rgb(241, 222, 222);
+    color: rgb(189, 123, 7);
+        font-family: "Hanalei", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: xxx-large;
+      outline-style: double;
+      
+}
+
+
