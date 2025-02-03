@@ -16,7 +16,7 @@ for(var i=0; i < providers.length; i++){
         // it adds it to the list
     }
 }
-
+uniqueProviders.sort()
 var internetSelect = document.getElementById("internetProvides")
 for (var i = 0; i < uniqueProviders.length; i++){
     var el = document.createElement("option")
@@ -36,10 +36,19 @@ for(var i=0; i < neighborhoods.length; i++){
     }
 }
 
+uniqueNeighborhoods.sort()
+
 var neighborhoodSelect = document.getElementById("Neighborhoods")
 for (var i = 0; i < uniqueNeighborhoods.length; i++){
     var el2 = document.createElement("option")
     el2.innerHTML = uniqueNeighborhoods[i];
     el2.value = uniqueNeighborhoods[i];
     neighborhoodSelect.appendChild(el2);
+}
+
+function findPublicWIFI(providerInput, neighborhoodInput, locationInput){
+    console.log(providerInput)
+    console.log(neighborhoodInput)
+    console.log(locationInput)
+
 }
