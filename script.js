@@ -63,11 +63,13 @@ function findPublicWIFI(providerInput, neighborhoodInput, locationInput){
         }
     } else{
         perfectMatchs = []
-        for(var i=0; i < providers.length; i++){
+        var i=0;
+        while( i < providers.length){
         
             if (providers[i] == providerInput && neighborhoods[i] == neighborhoodInput && accessLocations[i].includes(locationInput)){
                 perfectMatchs.push(locations[i])
             }
+            i++
         }
     }
 
