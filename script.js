@@ -1,4 +1,5 @@
 
+
 var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/refs/heads/main/Miscellaneous/NYC%20Public%20Wifi%20Locations.csv"
 var providers = getColumn(url,1)
 var locations = getColumn(url,2)
@@ -85,7 +86,7 @@ function findPublicWIFI(providerInput, neighborhoodInput, locationInput){
 function getData(){
     var matches = JSON.parse(sessionStorage.getItem("matches"));
 
-    matches = document.getElementById("matches");
+   document.getElementById("matches").innerHTML= matches;
 
 }
 
