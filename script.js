@@ -5,7 +5,7 @@ var locations = getColumn(url,2)
 var accessLocations = getColumn(url,5)
 var boroughs = getColumn(url,6)
 var neighborhoods = getColumn(url,7)
-
+var indoorLocations = ["Library", "Indoor"]
 
 var uniqueProviders = [];
 for(var i=0; i < providers.length; i++){
@@ -50,5 +50,49 @@ function findPublicWIFI(providerInput, neighborhoodInput, locationInput){
     console.log(providerInput)
     console.log(neighborhoodInput)
     console.log(locationInput)
+    var perfectMatchs;
+    if(locationInput=="Indoor"){
+        locationInput=indoorLocations;
+        perfectMatchs = []
+        for(var i=0; i < providers.length; i++){
+        
+            if (providers[i] == providerInput && neighborhoods[i] == neighborhoodInput && locationInput.includes(accessLocations[i])){
+                perfectMatchs.push(locations[i])
+            }
+        }
+    } else{
+        perfectMatchs = []
+        for(var i=0; i < providers.length; i++){
+        
+            if (providers[i] == providerInput && neighborhoods[i] == neighborhoodInput && accessLocations[i].includes(locationInput)){
+                perfectMatchs.push(locations[i])
+            }
+        }
+    }
 
+    if (perfectMatchs.length==0){
+        console.log("get your own wifi you bum™")
+        location.replace("getYourOwn.html");
+    }
+    else{
+        console.log(perfectMatchs)
+        sessionStorage.setItem("matches", JSON.stringify(perfectMatchs));
+        location.replace("wifi.html");
+        
+    }
+}
+
+function getData(){
+    var matches = JSON.parse(sessionStorage.getItem("matches"));
+
+    matches = document.getElementById("matches");
+
+}
+
+
+function goBack(){
+    location.replace("indext.html");
+  }
+function pullResults(){
+    
 }

@@ -20,15 +20,17 @@
 
     <label>Indoors or Outdoors: </label>
     <select id="Location">
-        <option value="Indoors">Indoors</option>
-        <option value="Outdoors">Outdoors</option>
+        <option value="Indoor">Indoors</option>
+        <option value="Outdoor">Outdoors</option>
     </select>
 
     <br><br>
     <center>
-    <button onclick="findPublicWIFI(document.getElementById('internetProvides').value, document.getElementById('Neighborhoods').value, document.getElementById('Location').value  )">Find My Free Public WIFI!</button>
+    <button onclick="findPublicWIFI(document.getElementById('internetProvides').value, document.getElementById('Neighborhoods').value, document.getElementById('Location').value )">Find My Free Public WIFI!</button>
     </center>
+    
 </body>
+
 
 <script src="utils.js"></script>
 <script src="script.js"></script>
